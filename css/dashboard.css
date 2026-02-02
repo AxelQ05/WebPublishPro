@@ -1,0 +1,245 @@
+/* Dashboard Specific Styles */
+.dashboard-section {
+    padding: 80px 0;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    background: linear-gradient(135deg, rgba(45, 91, 227, 0.05) 0%, rgba(124, 58, 237, 0.05) 100%);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(45, 91, 227, 0.1);
+}
+
+.welcome-message h2 {
+    font-size: 2.2rem;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+}
+
+.welcome-message p {
+    color: var(--gray);
+    font-size: 1.1rem;
+}
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.stat-card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border);
+    transition: all 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+}
+
+.stat-card h3 {
+    font-size: 0.95rem;
+    color: var(--gray);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stat-card .value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-dark);
+    line-height: 1;
+}
+
+.stat-card .progress {
+    margin-top: 15px;
+    height: 8px;
+    background-color: var(--gray-light);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.stat-card .progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 4px;
+    transition: width 1s ease;
+}
+
+/* Dashboard Topics */
+#dashboardTopics .topic-card {
+    padding: 30px;
+}
+
+.topic-progress {
+    margin: 20px 0;
+}
+
+.topic-progress > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.topic-progress span:first-child {
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.topic-progress span:last-child {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.topic-progress > div:last-child {
+    height: 8px;
+    background-color: var(--gray-light);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.topic-progress > div:last-child > div {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+.topic-actions .btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+}
+
+/* Recent Activity */
+.recent-activity {
+    background-color: white;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border);
+    margin-top: 60px;
+}
+
+.activity-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--gray-light);
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.activity-item:hover {
+    background-color: rgba(45, 91, 227, 0.03);
+}
+
+.activity-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.activity-content {
+    flex-grow: 1;
+}
+
+.activity-title-small {
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 5px;
+}
+
+.activity-description {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.activity-time {
+    color: var(--gray);
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+/* Responsive for Dashboard */
+@media (max-width: 992px) {
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+    
+    .dashboard-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-header {
+        padding: 30px;
+    }
+    
+    .welcome-message h2 {
+        font-size: 1.8rem;
+    }
+    
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-card .value {
+        font-size: 2rem;
+    }
+    
+    .recent-activity {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .dashboard-header {
+        padding: 25px;
+    }
+    
+    .welcome-message h2 {
+        font-size: 1.6rem;
+    }
+    
+    .stat-card {
+        padding: 25px;
+    }
+    
+    #dashboardTopics .topic-card {
+        padding: 25px;
+    }
+}

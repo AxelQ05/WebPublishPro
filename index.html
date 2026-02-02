@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebPublish Pro - Plataforma Educativa de Publicación Web</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Progress Indicator -->
+    <div class="progress-indicator" id="progressIndicator"></div>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <div class="logo-text">WebPublish Pro</div>
+                </a>
+                <div class="nav-links">
+                    <a href="#publicador" class="nav-link active">
+                        <i class="fas fa-upload"></i>
+                        <span>Publicador</span>
+                    </a>
+                    <a href="#servidor" class="nav-link">
+                        <i class="fas fa-server"></i>
+                        <span>Servidor</span>
+                    </a>
+                    <a href="#dominio" class="nav-link">
+                        <i class="fas fa-globe"></i>
+                        <span>Dominio</span>
+                    </a>
+                    <a href="#alojamiento" class="nav-link">
+                        <i class="fas fa-hdd"></i>
+                        <span>Alojamiento</span>
+                    </a>
+                    <a href="#solucion" class="nav-link">
+                        <i class="fas fa-puzzle-piece"></i>
+                        <span>Solución Web</span>
+                    </a>
+                    <a href="#plataforma" class="nav-link">
+                        <i class="fas fa-desktop"></i>
+                        <span>Plataforma</span>
+                    </a>
+                </div>
+                <div class="auth-section" id="authSection">
+                    <!-- Dinámicamente actualizado por JavaScript -->
+                    <button id="headerLoginBtn" class="btn btn-outline">
+                        <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
+                    </button>
+                    <button id="headerRegisterBtn" class="btn btn-primary">
+                        <i class="fas fa-user-plus"></i> Registrarse
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Toast Messages Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content fade-in-up">
+                    <div class="hero-badge">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Plataforma Educativa Profesional</span>
+                    </div>
+                    <h1>Domina el Arte de la <span class="gradient-text">Publicación Web</span></h1>
+                    <p>Aprende desde cero hasta nivel experto todos los conceptos, herramientas y mejores prácticas para publicar sitios web exitosos. Contenido actualizado, ejemplos reales y guías paso a paso.</p>
+                    <div class="auth-section">
+                        <button id="startLearningBtn" class="btn btn-primary">
+                            <i class="fas fa-play-circle"></i> Comenzar Curso
+                        </button>
+                        <button id="dashboardBtn" class="btn btn-secondary" style="display: none;">
+                            <i class="fas fa-tachometer-alt"></i> Mi Dashboard
+                        </button>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">6</div>
+                            <div class="stat-label">Módulos Completos</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">48+</div>
+                            <div class="stat-label">Horas de Contenido</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">24</div>
+                            <div class="stat-label">Ejemplos Prácticos</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Online & Gratuito</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Topics Section -->
+        <section class="section" id="topics">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <div class="section-subtitle">Curso Completo</div>
+                    <h2 class="section-title">Módulos de Aprendizaje</h2>
+                    <p class="section-description">Explora cada tema en profundidad con explicaciones detalladas, ejemplos reales y mejores prácticas de la industria.</p>
+                </div>
+                
+                <div class="topics-grid">
+                    <!-- Publicador de sitio web -->
+                    <div class="topic-card fade-in-up" id="publicador">
+                        <div class="topic-header">
+                            <div class="topic-icon">
+                                <i class="fas fa-upload"></i>
+                            </div>
+                            <h3 class="topic-title">Publicador de Sitio Web</h3>
+                        </div>
+                        <p class="topic-description">Software y herramientas especializadas para transferir archivos desde tu computadora local a un servidor web, haciendo tu sitio accesible en Internet.</p>
+                        
+                        <div class="topic-details">
+                            <div class="detail-item">
+                                <div class="detail-icon"><i class="fas fa-check-circle"></i></div>
+                                <div class="detail-content">
+                                    <div class="detail-title">Tipos de Publicadores</div>
+                                    <div class="detail-text">Clientes FTP/FTPS/SFTP, editores de código con integración, plataformas de despliegue continuo y sistemas de gestión de contenido (CMS).</div>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-icon"><i class="fas fa-check-circle"></i></div>
+                                <div class="detail-content">
+                                    <div class="detail-title">Flujo de Trabajo</div>
+                                    <div class="detail-text">Desarrollo local → Pruebas → Versionamiento → Transferencia segura → Verificación en servidor → Optimización.</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="topic-examples">
+                            <div class="examples-title">
+                                <i class="fas fa-laptop-code"></i>
+                                <span>Herramientas Populares</span>
+                            </div>
+                            <div class="examples-list">
+                                <span class="example-tag">FileZilla</span>
+                                <span class="example-tag">Cyberduck</span>
+                                <span class="example-tag">VS Code + SFTP</span>
+                                <span class="example-tag">GitHub Actions</span>
+                                <span class="example-tag">Netlify CLI</span>
+                                <span class="example-tag">WP Engine</span>
+                            </div>
+                        </div>
+                        
+                        <div class="topic-footer">
+                            <div class="topic-level">
+                                <div class="level-dot level-beginner"></div>
+                                <span>Nivel: Principiante</span>
+                            </div>
+                            <div class="topic-duration">
+                                <i class="far fa-clock"></i>
+                                <span>4 horas</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Servidor Web -->
+                    <div class="topic-card fade-in-up" id="servidor">
+                        <div class="topic-header">
+                            <div class="topic-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <h3 class="topic-title">Servidor Web</h3>
+                        </div>
+                        <p class="topic-description">Infraestructura hardware y software que almacena, procesa y entrega contenido web a los navegadores de los usuarios mediante protocolos como HTTP/HTTPS.</p>
+                        
+                        <div class="topic-details">
+                            <div class="detail-item">
+                                <div class="detail-icon"><i class="fas fa-check-circle"></i></div>
+                                <div class="detail-content">
+                                    <div class="detail-title">Arquitectura</div>
+                                    <div class="detail-text">Hardware físico o virtual, sistema operativo, servidor web (Apache/Nginx), base de datos, lenguajes de programación y middlewares.</div>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-icon"><i class="fas fa-check-circle"></i></div>
+                                <div class="detail-content">
+                                    <div class="detail-title">Tipos de Servidores</div>
+                                    <div class="detail-text">Compartido, VPS, Dedicado, Cloud, Bare Metal, Contenedores (Docker), Serverless y Edge Computing.</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="topic-examples">
+                            <div class="examples-title">
+                                <i class="fas fa-network-wired"></i>
+                                <span>Tecnologías Ejemplo</span>
+                            </div>
+                            <div class="examples-list">
+                                <span class="example-tag">Apache 2.4</span>
+                                <span class="example-tag">Nginx</span>
+                                <span class="example-tag">LiteSpeed</span>
+                                <span class="example-tag">Node.js</span>
+                                <span class="example-tag">Docker</span>
+                                <span class="example-tag">AWS EC2</span>
+                            </div>
+                        </div>
+                        
+                        <div class="topic-footer">
+                            <div class="topic-level">
+                                <div class="level-dot level-intermediate"></div>
+                                <span>Nivel: Intermedio</span>
+                            </div>
+                            <div class="topic-duration">
+                                <i class="far fa-clock"></i>
+                                <span>6 horas</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dominio Web -->
+                    <div class="topic-card fade-in-up" id="dominio">
+                        <div class="topic-header">
+                            <div class="topic-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h3 class="topic-title">Dominio Web</h3>
+                        </div>
+                        <p class="topic-description">Identificador único y direccionable en Internet que permite a los usuarios acceder a sitios web mediante nombres memorables en lugar de direcciones IP numéricas.</p>
+                        
+                        <div class="topic-details">
+                            <div class="detail-item">
+                                <div class="detail-icon"><i class="fas fa-check-circle"></i></div>
+                                <div class="detail-content">
+                                    <div class="detail-title">Sistema DNS</div>
+                                    <div class="detail-text">Jerarquía distribuida que traduce nombres de dominio a direcciones IP mediante registros A, AAAA, CNAME, MX, TXT y NS.</div>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-icon"><i class="fas fa-check-circle"></i></div>
+                                <div class="detail-content">
+                                    <div class="detail-title">Componentes</div>
+                                    <div class="detail-text">Registro de dominio, DNS hosting, WHOIS, SSL/TLS, subdominios, redirecciones, protección de privacidad y renovación.</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="topic-examples">
+                            <div class="examples-title">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Extensiones Comunes</span>
+                            </div>
+                            <div class="examples-list">
+                                <span class="example-tag">.com (Comercial)</span>
+                                <span class="example-tag">.org (Organizaciones)</span>
+                                <span class="example-tag">.net (Redes)</span>
+                                <span class="example-tag">.io (Tecnología)</span>
+                                <span class="example-tag">.dev (Desarrolladores)</span>
+                                <span class="example-tag">.es (España)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="topic-footer">
+                            <div class="topic-level">
+                                <div class="level-dot level-beginner"></div>
+                                <span>Nivel: Principiante</span>
+                            </div>
+                            <div class="topic-duration">
+                                <i class="far fa-clock"></i>
+                                <span>3 horas</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Alojamiento y Publicación -->
+                    <div class="topic-card fade-in-up" id="alojamiento">
+                        <div class="topic-header">
+                            <div class="topic-icon">
+                                <i class="fas fa-hdd"></i>
+                            </div>
+                            <h3 class="topic-title">Alojamiento y Publicación</h3>
+                        </div>
+                        <p class="topic-description">Servicios que proporcionan espacio en servidores, recursos computacionales y herramientas de gestión para publicar y mantener sitios web accesibles 24/7.</p>
+                        
+                        <div class="topic-details">
+                            <div class="detail-item">
+                                <div class="detail-icon"><i class="fas fa-check-circle"></i></div>
+                                <div class="detail-content">
+                                    <div class="detail-title">Modelos de Hosting</div>
+                                    <div class="detail-text">Compartido (shared), VPS, Dedicado, Cloud, WordPress gestionado, E-commerce, Reseller y Colocation.</div>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-icon"><i class="fas fa-check-circle"></i></div>
+                                <div class="detail-content">
+                                    <div class="detail-title">Consideraciones Técnicas</div>
+                                    <div class="detail-text">Ancho de banda, almacenamiento SSD, RAM, CPU, uptime garantizado, backups automáticos, escalabilidad y soporte técnico.</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="topic-examples">
+                            <div class="examples-title">
+                                <i class="fas fa-cloud"></i>
+                                <span>Proveedores Populares</span>
+                            </div>
+                            <div class="examples-list">
+                                <span class="example-tag">Bluehost</span>
+                                <span class="example-tag">SiteGround</span>
+                                <span class="example-tag">AWS Lightsail</span>
+                                <span class="example-tag">DigitalOcean</span>
+                                <span class="example-tag">Vercel</span>
+                                <span class="example-tag">Cloudways</span>
+                            </div>
+                        </div>
+                        
+                        <div class="topic-footer">
+                            <div class="topic-level">
+                                <div class="level-dot level-intermediate"></div>
+                                <span>Nivel: Intermedio</span>
+                            </div>
+                            <div class="topic-duration">
+                                <i class="far fa-clock"></i>
+                                <span>5 horas</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Solución Web Integral -->
+                    <div class="topic-card fade-in-up" id="solucion">
+                        <div class="topic-header">
+                            <div class="topic-icon">
+                                <i class="fas fa-puzzle-piece"></i>
+                            </div>
+                            <h3 class="topic-title">Solución Web Integral</h3>
+                        </div>
+                        <p class="topic-description">Plataformas todo-en-uno que combinan herramientas de creación, alojamiento, gestión y optimización de sitios web sin necesidad de conocimientos técnicos avanzados.</p>
+                        
+                        <div class="topic-details">
+                            <div class="detail-item">
+                                <div class="detail-icon"><i class="fas fa-check-circle"></i></div>
+                                <div class="detail-content">
+                                    <div class="detail-title">Componentes Incluidos</div>
+                                    <div class="detail-text">Constructor visual, plantillas responsive, hosting, dominio, SSL, SEO tools, analytics, e-commerce, marketing y soporte.</div>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-icon"><i class="fas fa-check-circle"></i></div>
+                                <div class="detail-content">
+                                    <div class="detail-title">Casos de Uso</div>
+                                    <div class="detail-text">Pequeñas empresas, portfolios, blogs, tiendas online, landing pages, sitios corporativos y páginas de servicios.</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="topic-examples">
+                            <div class="examples-title">
+                                <i class="fas fa-rocket"></i>
+                                <span>Plataformas Todo-en-Uno</span>
+                            </div>
+                            <div class="examples-list">
+                                <span class="example-tag">Wix</span>
+                                <span class="example-tag">Squarespace</span>
+                                <span class="example-tag">Shopify</span>
+                                <span class="example-tag">Webflow</span>
+                                <span class="example-tag">WordPress.com</span>
+                                <span class="example-tag">GoDaddy Website Builder</span>
+                            </div>
+                        </div>
+                        
+                        <div class="topic-footer">
+                            <div class="topic-level">
+                                <div class="level-dot level-beginner"></div>
+                                <span>Nivel: Principiante</span>
+                            </div>
+                            <div class="topic-duration">
+                                <i class="far fa-clock"></i>
+                                <span>4 horas</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plataforma Web -->
+                    <div class="topic-card fade-in-up" id="plataforma">
+                        <div class="topic-header">
+                            <div class="topic-icon">
+                                <i class="fas fa-desktop"></i>
+                            </div>
+                            <h3 class="topic-title">Plataforma Web</h3>
+                        </div>
+                        <p class="topic-description">Entorno tecnológico completo que proporciona frameworks, librerías, APIs y servicios para desarrollar, desplegar y escalar aplicaciones web modernas y complejas.</p>
+                        
+                        <div class="topic-details">
+                            <div class="detail-item">
+                                <div class="detail-icon"><i class="fas fa-check-circle"></i></div>
+                                <div class="detail-content">
+                                    <div class="detail-title">Stack Tecnológico</div>
+                                    <div class="detail-text">Frontend (React/Vue/Angular), Backend (Node.js/Django/Laravel), Base de datos, APIs, autenticación, almacenamiento y despliegue.</div>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-icon"><i class="fas fa-check-circle"></i></div>
+                                <div class="detail-content">
+                                    <div class="detail-title">Arquitecturas Modernas</div>
+                                    <div class="detail-text">SPA (Single Page Apps), PWA (Progressive Web Apps), JAMstack, Microservicios, Serverless y aplicaciones isomórficas.</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="topic-examples">
+                            <div class="examples-title">
+                                <i class="fas fa-code"></i>
+                                <span>Tecnologías Avanzadas</span>
+                            </div>
+                            <div class="examples-list">
+                                <span class="example-tag">React + Node.js</span>
+                                <span class="example-tag">Vue + Laravel</span>
+                                <span class="example-tag">Next.js + Vercel</span>
+                                <span class="example-tag">Angular + Firebase</span>
+                                <span class="example-tag">Django + PostgreSQL</span>
+                                <span class="example-tag">Spring Boot + React</span>
+                            </div>
+                        </div>
+                        
+                        <div class="topic-footer">
+                            <div class="topic-level">
+                                <div class="level-dot level-advanced"></div>
+                                <span>Nivel: Avanzado</span>
+                            </div>
+                            <div class="topic-duration">
+                                <i class="far fa-clock"></i>
+                                <span>8 horas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>WebPublish Pro</h3>
+                    <p style="color: #cbd5e1; margin-bottom: 25px; line-height: 1.7;">Plataforma educativa líder en formación sobre publicación web. Ofrecemos contenido actualizado, ejemplos prácticos y guías completas para todos los niveles.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Módulos del Curso</h3>
+                    <ul class="footer-links">
+                        <li><a href="#publicador"><i class="fas fa-chevron-right"></i> Publicador de Sitio Web</a></li>
+                        <li><a href="#servidor"><i class="fas fa-chevron-right"></i> Servidor Web</a></li>
+                        <li><a href="#dominio"><i class="fas fa-chevron-right"></i> Dominio Web</a></li>
+                        <li><a href="#alojamiento"><i class="fas fa-chevron-right"></i> Alojamiento Web</a></li>
+                        <li><a href="#solucion"><i class="fas fa-chevron-right"></i> Solución Web Integral</a></li>
+                        <li><a href="#plataforma"><i class="fas fa-chevron-right"></i> Plataforma Web</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Recursos Adicionales</h3>
+                    <ul class="footer-links">
+                        <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</a></li>
+                        <li><a href="register.html"><i class="fas fa-user-plus"></i> Registrarse</a></li>
+                        <li><a href="#"><i class="fas fa-book"></i> Blog Educativo</a></li>
+                        <li><a href="#"><i class="fas fa-file-code"></i> Ejemplos de Código</a></li>
+                        <li><a href="#"><i class="fas fa-video"></i> Tutoriales en Video</a></li>
+                        <li><a href="#"><i class="fas fa-question-circle"></i> Centro de Ayuda</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 WebPublish Pro. Todos los derechos reservados. Esta es una plataforma educativa demostrativa.</p>
+                <p id="userStatusInfo" style="margin-top: 10px;">Estado: No autenticado</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - WebPublish Pro</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Progress Indicator -->
+    <div class="progress-indicator" id="progressIndicator"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <div class="logo-text">WebPublish Pro</div>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>Inicio</span>
+                    </a>
+                    <a href="#progress" class="nav-link active">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Progreso</span>
+                    </a>
+                    <a href="#modules" class="nav-link">
+                        <i class="fas fa-book"></i>
+                        <span>Módulos</span>
+                    </a>
+                    <a href="#resources" class="nav-link">
+                        <i class="fas fa-folder-open"></i>
+                        <span>Recursos</span>
+                    </a>
+                </div>
+                <div class="auth-section" id="authSection">
+                    <!-- Dinámicamente actualizado por JavaScript -->
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Toast Messages Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Main Content -->
+    <main>
+        <section class="dashboard-section">
+            <div class="container">
+                <div class="dashboard-header fade-in-up">
+                    <div class="welcome-message">
+                        <h2>Bienvenido al Dashboard, <span id="userName">Usuario</span></h2>
+                        <p>Gestiona tu progreso de aprendizaje, accede a recursos exclusivos y continúa tu formación en publicación web.</p>
+                    </div>
+                    <button id="logoutDashboardBtn" class="btn btn-logout">
+                        <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                    </button>
+                </div>
+                
+                <div class="dashboard-stats fade-in-up">
+                    <div class="stat-card">
+                        <h3>Progreso General</h3>
+                        <div class="value" id="progressPercent">0%</div>
+                        <div class="progress">
+                            <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Temas Completados</h3>
+                        <div class="value" id="completedTopics">0/6</div>
+                        <div class="progress">
+                            <div class="progress-bar" id="topicsBar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Días de Actividad</h3>
+                        <div class="value" id="activeDays">1</div>
+                        <div class="progress">
+                            <div class="progress-bar" id="activityBar" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Puntos de Aprendizaje</h3>
+                        <div class="value" id="learningPoints">0</div>
+                        <div class="progress">
+                            <div class="progress-bar" id="pointsBar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section-header fade-in-up">
+                    <h2 class="section-title">Continuar Aprendizaje</h2>
+                    <p class="section-description">Selecciona un módulo para continuar tu formación o repasar conceptos importantes.</p>
+                </div>
+                
+                <div class="topics-grid" id="dashboardTopics">
+                    <!-- Los módulos se cargarán dinámicamente aquí -->
+                </div>
+                
+                <div class="recent-activity fade-in-up" id="recentActivity">
+                    <h3 class="activity-title">Actividad Reciente</h3>
+                    <div class="activity-list">
+                        <!-- La actividad se cargará dinámicamente aquí -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>WebPublish Pro</h3>
+                    <p style="color: #cbd5e1; margin-bottom: 25px; line-height: 1.7;">Plataforma educativa líder en formación sobre publicación web.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                        <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                        <li><a href="index.html#publicador"><i class="fas fa-book"></i> Módulos</a></li>
+                        <li><a href="#"><i class="fas fa-question-circle"></i> Ayuda</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Cuenta</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" id="profileLink"><i class="fas fa-user"></i> Mi Perfil</a></li>
+                        <li><a href="#" id="settingsLink"><i class="fas fa-cog"></i> Configuración</a></li>
+                        <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Cambiar Cuenta</a></li>
+                        <li><a href="#" id="logoutFooterLink"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 WebPublish Pro. Todos los derechos reservados.</p>
+                <p id="userStatusInfo" style="margin-top: 10px;">Conectado</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/dashboard.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
